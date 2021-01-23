@@ -1,0 +1,54 @@
+{
+  "fileTypes": ["s", "mips", "asm"],
+  "keyEquivalent": "^~M",
+  "name": "UW MIPS Assembly",
+  "patterns": [
+    {
+      "name": "support.function.mips",
+      "match": "\\b(add|sub|mult|multu|div|divu|mfhi|mflo|lis|lw|sw|slt|sltu|beq|bne|jr|jalr)\\b"
+    },
+    { "name": "storage.type.mips", "match": ".word\\b" },
+    { "captures": { "1": { "name": "entity.name.mips" } }, "name": "entity.name.mips", "match": "\\b([A-Za-z0-9_]+):" },
+    {
+      "captures": { "1": { "name": "variable.parameter.mips" } },
+      "name": "variable.parameter.mips",
+      "match": "(\\$([1-9]|[12][0-9]))\\b"
+    },
+    {
+      "captures": { "1": { "name": "constant.language.mips" } },
+      "name": "constant.language.mips",
+      "match": "(\\$(0|30|31))\\b"
+    },
+    { "name": "constant.numeric.integer.mips", "match": "\\b(\\d+|0(x|X)[a-fA-F0-9]+)\\b" },
+    {
+      "begin": "\"",
+      "end": "\"",
+      "name": "string.quoted.double.mips",
+      "endCaptures": { "0": { "name": "punctuation.definition.string.end.mips" } },
+      "beginCaptures": { "0": { "name": "punctuation.definition.string.begin.mips" } },
+      "patterns": [{ "name": "constant.character.escape.mips", "match": "\\\\[rnt\\\\\"]" }]
+    },
+    {
+      "begin": "'",
+      "end": "'",
+      "name": "string.quoted.single.mips",
+      "endCaptures": { "0": { "name": "punctuation.definition.string.end.mips" } },
+      "beginCaptures": { "0": { "name": "punctuation.definition.string.begin.mips" } },
+      "patterns": [{ "name": "constant.character.escape.mips", "match": "\\\\[rnt\\\\\"]" }]
+    },
+    {
+      "patterns": [
+        {
+          "begin": ";",
+          "end": "\\n",
+          "name": "comment.line.mips",
+          "beginCaptures": { "0": { "name": "punctuation.definition.comment.mips" } }
+        }
+      ],
+      "begin": "(^[ \\t]+)?(?=;)",
+      "end": "(?!\\G)",
+      "beginCaptures": { "1": { "name": "punctuation.definition.comment.leading.mips" } }
+    }
+  ],
+  "scopeName": "source.mips"
+}
