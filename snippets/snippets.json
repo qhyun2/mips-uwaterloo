@@ -1,0 +1,110 @@
+{
+  "word": {
+    "prefix": ".word",
+    "body": ".word ${1:1}\n",
+    "description": "Word",
+    "scope": "source.mips"
+  },
+  "add": {
+    "prefix": "add",
+    "body": "add $${1:d}, $${2:s}, $${3:t} ; $$1 = $$2 + $$3\n",
+    "description": "Add",
+    "scope": "source.mips"
+  },
+  "sub": {
+    "prefix": "sub",
+    "body": "sub $${1:d}, $${2:s}, $${3:t} ; $$1 = $$2 - $$3\n",
+    "description": "Subtract",
+    "scope": "source.mips"
+  },
+  "mult": {
+    "prefix": "mult",
+    "body": "mult $${1:s}, $${2:t} ; hi:lo = $$1 * $$2\n",
+    "description": "Multiply",
+    "scope": "source.mips"
+  },
+  "multu": {
+    "prefix": "multu",
+    "body": "multu $${1:s}, $${2:t} ; hi:lo = $$1 * $$2\n",
+    "description": "Multiply Unsigned",
+    "scope": "source.mips"
+  },
+  "div": {
+    "prefix": "div",
+    "body": "div $${1:s}, $${2:t} ; lo = $$1 / $$2, hi = $$1 % $$2\n",
+    "description": "Divide",
+    "scope": "source.mips"
+  },
+  "divu": {
+    "prefix": "divu",
+    "body": "divu $${1:s}, $${2:t} ; lo = $$1 / $$2, hi = $$1 % $$2\n",
+    "description": "Divide Unsigned",
+    "scope": "source.mips"
+  },
+  "mfhi": {
+    "prefix": "mfhi",
+    "body": "mfhi $${1:d} ; $$1 =  hi\n",
+    "description": "Move From High/Remainder",
+    "scope": "source.mips"
+  },
+  "mflo": {
+    "prefix": "mflo",
+    "body": "mflo $${1:d} ; $$1 =  lo\n",
+    "description": "Move From Low/Quotient",
+    "scope": "source.mips"
+  },
+  "lis": {
+    "prefix": "lis",
+    "body": "lis $${1:d} ; $$1 = $2 \n.word ${2:v}",
+    "description": "Load Immediate and Skip",
+    "scope": "source.mips"
+  },
+  "lw": {
+    "prefix": "lw",
+    "body": "lw $${1:t}, ${2:i}($${3:s}) ; $$1 = MEM [$$3 + $2]\n",
+    "description": "Load Word",
+    "scope": "source.mips"
+  },
+  "sw": {
+    "prefix": "sw",
+    "body": "sw $${1:t}, ${2:i}($${3:s}) ; MEM [$$3 + $2] = $$1 \n",
+    "description": "Store Word",
+    "scope": "source.mips"
+  },
+  "slt": {
+    "prefix": "slt",
+    "body": "slt $${1:d}, $${2:s}, $${3:t} ; $$1 = 1 if $$2 < $$3; 0 otherwise\n",
+    "description": "Set Less Than",
+    "scope": "source.mips"
+  },
+  "sltu": {
+    "prefix": "sltu",
+    "body": "sltu $${1:d}, $${2:s}, $${3:t} ; $$1 = 1 if $$2 < $$3; 0 otherwise\n",
+    "description": "Set Less Than Unsigned",
+    "scope": "source.mips"
+  },
+  "beq": {
+    "prefix": "beq",
+    "body": "beq $${1:s}, $${2:t}, ${3:i} ; if ($$1 == $$2) jump to label $3\n",
+    "description": "Branch on Equal",
+    "scope": "source.mips"
+  },
+  "bnq": {
+    "prefix": "bnq",
+    "body": "bnq $${1:s}, $${2:t}, ${3:i} ; if ($$1 =! $$2) jump to label $3\n",
+    "description": "Branch on Not Equal",
+    "scope": "source.mips"
+  },
+  "jr": {
+    "prefix": "jr",
+    "body": "jr $${1:s} ; pc = $${1:s}",
+    "description": "Jump Register",
+    "scope": "source.mips"
+  },
+  "jalr": {
+    "prefix": "jalr",
+    "body": "jalr $${1:s} ; \\$31 = pc and \\$pc = $$1\n",
+    "description": "Jump and Link Register",
+    "scope": "source.mips"
+  }
+}

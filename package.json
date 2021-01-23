@@ -1,25 +1,43 @@
 {
-    "name": "mips-uwaterloo",
-    "displayName": "UWaterloo MIPS Support",
-    "description": "Provides syntax highlighting and snippets for MIPS assembly language used in the University of Waterloo's CS241 course.",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.52.0"
-    },
-    "categories": [
-        "Programming Languages"
+  "name": "mips-uwaterloo",
+  "displayName": "UWaterloo MIPS Support",
+  "description": "Provides syntax highlighting and snippets for MIPS assembly language used in the University of Waterloo's CS241 course.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.52.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "mips",
+        "aliases": [
+          "UW MIPS Assembly",
+          "mips"
+        ],
+        "extensions": [
+          ".s",
+          ".mips",
+          ".asm"
+        ],
+        "configuration": "./language-configuration.json"
+      }
     ],
-    "contributes": {
-        "languages": [{
-            "id": "mips",
-            "aliases": ["UW MIPS Assembly", "mips"],
-            "extensions": [".s",".mips",".asm"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "mips",
-            "scopeName": "source.mips",
-            "path": "./syntaxes/mips.tmLanguage.json"
-        }]
-    }
+    "grammars": [
+      {
+        "language": "mips",
+        "scopeName": "source.mips",
+        "path": "./syntaxes/mips.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "mips",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  }
 }
