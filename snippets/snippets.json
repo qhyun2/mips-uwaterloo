@@ -97,7 +97,7 @@
   },
   "jr": {
     "prefix": "jr",
-    "body": "jr $${1:s} ; pc = $${1:s}",
+    "body": "jr $${1:31} ; pc = $${1:31}",
     "description": "Jump Register",
     "scope": "source.mips"
   },
