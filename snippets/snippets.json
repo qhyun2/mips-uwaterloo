@@ -89,9 +89,9 @@
     "description": "Branch on Equal",
     "scope": "source.mips"
   },
-  "bnq": {
-    "prefix": "bnq",
-    "body": "bnq $${1:s}, $${2:t}, ${3:i} ; if ($$1 =! $$2) jump to label $3\n",
+  "bne": {
+    "prefix": "bne",
+    "body": "bne $${1:s}, $${2:t}, ${3:i} ; if ($$1 =! $$2) jump to label $3\n",
     "description": "Branch on Not Equal",
     "scope": "source.mips"
   },
