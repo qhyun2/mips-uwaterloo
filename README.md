@@ -1,6 +1,6 @@
 # University of Waterloo MIPS Support
 
-This VSCode extension provides basic MIPS colorization and snippets support for the flavour of MIPS taught in the University of Waterloo's CS241 course.
+This VSCode extension provides basic MIPS colorization and snippets support for the flavour of MIPS taught in the University of Waterloo's CS courses.
 
 ### Colors
 
