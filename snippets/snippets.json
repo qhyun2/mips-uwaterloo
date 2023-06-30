@@ -11,6 +11,12 @@
     "description": "Add",
     "scope": "source.mips"
   },
+  "addi": {
+    "prefix": "addi",
+    "body": "addi $${1:t}, $${2:s}, ${3:i} ; $$1 = $$2 + $3\n",
+    "description": "Add Immediate",
+    "scope": "source.mips"
+  },
   "sub": {
     "prefix": "sub",
     "body": "sub $${1:d}, $${2:s}, $${3:t} ; $$1 = $$2 - $$3\n",
