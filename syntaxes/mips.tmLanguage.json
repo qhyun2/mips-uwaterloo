@@ -5,7 +5,7 @@
   "patterns": [
     {
       "name": "support.function.mips",
-      "match": "\\b(add|sub|mult|multu|div|divu|mfhi|mflo|lis|lw|sw|slt|sltu|beq|bne|jr|jalr)\\b"
+      "match": "\\b(add|sub|mult|multu|div|divu|mfhi|mflo|lis|lw|sw|slt|sltu|beq|bne|j|jr|jal|jalr)\\b"
     },
     { "name": "storage.type.mips", "match": ".word\\b" },
     { "captures": { "1": { "name": "entity.name.mips" } }, "name": "entity.name.mips", "match": "\\b([A-Za-z0-9_]+):" },

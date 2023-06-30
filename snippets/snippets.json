@@ -95,10 +95,22 @@
     "description": "Branch on Not Equal",
     "scope": "source.mips"
   },
+  "j": {
+    "prefix": "j",
+    "body": "j ${1:i} ; pc = $1\n",
+    "description": "Jump",
+    "scope": "source.mips"
+  },
   "jr": {
     "prefix": "jr",
     "body": "jr $${1:31} ; pc = $${1:31}",
     "description": "Jump Register",
+    "scope": "source.mips"
+  },
+  "jal": {
+    "prefix": "jal",
+    "body": "jal ${1:i} ; \\$31 = pc and \\$pc = $1\n",
+    "description": "Jump And Link",
     "scope": "source.mips"
   },
   "jalr": {
