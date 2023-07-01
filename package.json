@@ -1,7 +1,7 @@
 {
   "name": "mips-uwaterloo",
   "displayName": "UWaterloo MIPS Support",
-  "description": "Provides syntax highlighting and snippets for MIPS assembly language used in the University of Waterloo's CS courses.",
+  "description": "Provides syntax highlighting and snippets for MIPS assembly language used in the University of Waterloo's CS241 and CS230 courses.",
   "publisher": "qhyun-uwaterloo",
   "version": "1.0.1",
   "engines": {
